@@ -6,17 +6,17 @@ f = open(args[1], 'r', encoding='UTF-8')
 data = f.read()
 
 def count_frequency(str):
-  tup = {}
+  dict = {}
   detect_patterns = [
     'za', 'zu', 'zo', 'ce', 'ci', 'ça', 'çu', 'ço'
   ]
 
   for pattern in detect_patterns:
-    tup[pattern] = 0
+    dict[pattern] = 0
 
   for pattern in detect_patterns:
-    tup[pattern] = str.count(pattern)
-  return tup
+    dict[pattern] = str.count(pattern)
+  return dict
 
 sorted = sorted(count_frequency(data.lower()).items())
 # sorted = sorted(count_frequency(data).items(), key=lambda x:x[1], reverse=True)
