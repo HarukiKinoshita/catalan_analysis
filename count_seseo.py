@@ -30,3 +30,4 @@ with open(args[1].replace('.txt', '') + '_output_seseo.csv', 'w') as f_out:
 
 
 f.close()
+f_out.close()

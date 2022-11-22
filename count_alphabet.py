@@ -24,7 +24,7 @@ def count_frequency(str):
 sorted = sorted(count_frequency(data.lower()).items())
 # sorted = sorted(count_frequency(data).items(), key=lambda x:x[1], reverse=True)
 
-with open(args[1].replace('.txt', '') + '_output1.csv', 'w') as f_out:
+with open(args[1].replace('.txt', '') + '_output.csv', 'w') as f_out:
   for row in sorted:
     print(*row, sep=',', file=f_out)
 
